@@ -3,9 +3,7 @@
 """My first square"""
 
 
-
 class Square:
     """An empty class Square"""
-
 
     pass
