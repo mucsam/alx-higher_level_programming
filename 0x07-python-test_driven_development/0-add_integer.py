@@ -4,7 +4,7 @@
 
 def add_integer(a, b=98):
     """ Adds 2 integers
-    
+
     Args:
         a: first parameter
         b: second parameter
