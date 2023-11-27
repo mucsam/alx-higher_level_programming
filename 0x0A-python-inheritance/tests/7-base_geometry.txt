@@ -1,0 +1,54 @@
+==============================
+Testing the BaseGeometry class
+==============================
+
+Importing the BaseGeometry class
+-----------------------------------
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking module docstring
+-----------------------------
+>>> module_doc = __import__('7-base_geometry').__doc__
+>>> len(module_doc) > 1
+True
+
+
+Checking for class docstring
+-----------------------------
+>>> class_doc = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> len(class_doc) > 1
+True
+
+
+checking methods docstrings
+---------------------------
+>>> area_doct = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> len(area_doct) > 1
+True
+
+>>> integer_validator_doct = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> len(integer_validator_doct) > 1
+True
+
+
+Checking Exception on Area
+--------------------------
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+	....
+Exception: area() is not implemented
+
+
+Checking integer_validator
+---------------------------
+>>> bg = BaseGeometry()
+>>> bg.integer_validator('sam', 'njoro')
+Traceback (most recent call last):
+	...
+TypeError: sam must be an integer
+
+>>> bg.integer_validator('sam', -1)
+Traceback (most recent call last):
+	...
+ValueError: sam must be greater than 0
