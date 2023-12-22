@@ -20,3 +20,5 @@ if __name__ == '__main__':
     querry_rows = cur.fetchall()
     for row in querry_rows:
         print(row)
+    cur.close()
+    conn.close()
